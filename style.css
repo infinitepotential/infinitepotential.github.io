@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu5DRgFqWF_g.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYhkM86xQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v13/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e4D5hNKc.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+/* Style the top navigation bar */
+header {
+    /*overflow: scroll; /* Hide overflow */
+    background-color: white; /* Dark background color */
+    position: fixed; /*did not move when scroll down*/
+    top: 0;
+    left: 0;
+    width: 100%; /* occupied the width of the screen*/
+    height: 100px;
+    border-top-style: solid;
+    border-top-color: #663399;
+    border-top-width: thick;
+}
+
+header img{ /* I did not use inline for this, it seem float to left anyway*/
+  margin: 0px 0px 0px 40px;
+}
+
+
+
+/*Navagation bar style*/
+
+.navbar {
+    overflow: hidden;
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:13px 40px 0px 40px;
+    display: inline;
+    float: right;
+    margin: 10px;
+    bottom: 0;
+    left: 0;
+
+}
+
+/* .navbar ul{
+  display: inline;
+  padding:40px 40px;
+}*/
+
+.navbar li {
+    display: inline; /* Change the display to block or other format for responsive reasons (see below) */
+    text-align: center; /* Center the text */
+    padding-right: 30px;
+
+}
+
+
+.navbar a {
+    float: right;
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    /* font-family: times; */
+}
+
+.navbar a:hover {
+  border-bottom-style: inset;
+  border-width: 3px;
+  border-bottom-color: black;
+}
+
+
+
+/* styling of the arrow  */
+i {
+  border: solid grey;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+    padding: 14px 14px 14px 20px;
+}
+
+.down {
+    transform: rotate(45deg); /* orgin direciton of the arrow is down */
+}
+
+.dropdown:hover i.down { /* change the direction of the arrow  */
+  transform: rotate(-130deg);
+}
+
+
+.dropdown .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: Grey;
+    padding: 0px 14px 0px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+
+
+
+ .navbar a:hover, .dropdown:hover .dropbtn {
+    /*background-color: lightgreen; */
+    transition: background-color .8s;
+    color: black;
+
+}
+
+/*
+.navbar a, .dropdown.dropbtn {
+    transition: background-color .3s;
+}*/
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 14px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: grey;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom-style: none;
+
+}
+
+.dropdown-content a:hover {
+    background-color: lightgrey; /*#ddd;*/
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block ;
+    /* transition: block 0.8s; Not showing */
+}
+
+/* header :after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+
+
+
+
+.main{
+  margin-top: 100px; /* make sure the menu is not overlay by the main contents*/
+  display: block;
+
+}
+
+.slider {
+background-image: url("image/blogslider1.jpg");
+background-size: cover;
+background-position: center;
+height: 450px;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* SIDEBAR NAVIGATION */
+.column.side {
+    width: 23%; /*because of the padding, need to reduce < 100%)*/
+    display: block;
+}
+
+
+/* Style the search box inside the navigation bar */
+
+.column.side h3 {
+  margin: 4em 20px 20px 15px;
+  color: black;
+  font-family: "Times", serif;
+}
+
+.column.side input[type=text] {
+    float: left;
+    border: none;
+    margin: 0 40px 40px 16px;
+    font-size: 20px;
+}
+
+.column.side a {
+    padding: 16px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    display: block;
+    font-family: "Garamond", "Times", serif;
+
+}
+
+.column.side a:hover {
+    color: black;
+}
+
+
+
+/* right column */
+.column.right {
+    width: 72%;
+    text-align: center;
+}
+
+.column.right h1 {
+    font-family: "Playfair";
+      margin-bottom: 2em;
+      font-style: italic;
+}
+
+.column.right h1,p {
+    color: black;
+
+}
+
+.column.right p {
+    color: black;
+    font-family:   "Playfair", "Droid Serif" ;
+    font-size: 20px;
+    text-align: center;
+    /*margin-top: 2em; */
+
+}
+
+.column.right img{
+    width: 80%;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*social icon*/
+
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+/* Hover effect on image */
+.gallery {
+  display: flex; /*Displays an element as a block-level flex container*/
+  justify-content: center; /* elment stays in center*/
+  margin-top: 100px;
+  margin-bottom: 50px;
+  flex-direction:  row;
+}
+
+.gallery-item {
+  margin: 20px;
+  width: 270px;
+  height: 700px;
+  text-align: center; /*it does't affect the paragragh for some reason*/
+}
+
+.gallery-item .thumbnail {
+    width: 180px;
+    transition: transform .5s;
+    margin: 0px 10px 60px 10px;
+    border-radius: 100%;
+}
+
+.gallery-item .thumbnail:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.gallery-item h2 {
+  color: black;
+  text-decoration: underline;
+}
+
+.gallery-item p {
+  width: 230px;
+  height: 300px;
+  padding: 10px;
+}
+
+/*contact button*/
+.contact-btn {
+color: White;
+vertical-align: bottom;
+margin: auto; /* To horizontally center a block element (like div) */
+background-color:  #663399;
+width: 160px;
+font-size: 17px;
+text-align: center;
+padding: 10px 0;
+transition: .5s;
+border: 2px solid #663399;
+}
+
+.contact-btn a {
+text-decoration: none;
+color: inherit;
+}
+
+
+
+.contact-btn:hover {
+background-color:  white;
+    color: #663399; /* gray text color */
+    text-decoration: none;
+    border: 2px solid #663399;
+}
+
+
+
+/* FOOTER NAVIGATION */
+
+.footer {
+  height: 60px;
+  background-color: black;
+}
+
+#copyright {
+  font-size: 1rem;
+  padding-top: 20px;
+  margin-left: 20px;
+  color: grey;
+}
